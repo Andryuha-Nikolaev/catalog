@@ -1,6 +1,18 @@
+@use "$styles/functions/convert";
+
+.block {
+  border-radius: convert.to-rem(10);
+  overflow: hidden;
+  background-color: var(--color-bg-card);
+}
+
 .image {
   width: 100%;
   height: auto;
   object-fit: cover;
   object-position: center;
+}
+
+.info {
+  padding: convert.to-rem(10) convert.to-rem(10) convert.to-rem(20);
 }

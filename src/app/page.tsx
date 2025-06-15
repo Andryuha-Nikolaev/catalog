@@ -22,8 +22,6 @@ export default async function Home({ searchParams }: HomePageProps) {
 
   const queryString = currentSearchParams.toString()
 
-  console.log(queryString)
-
   const data = await getCars(queryString)
 
   return (

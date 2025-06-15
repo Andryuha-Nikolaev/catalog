@@ -40,9 +40,10 @@
   --color-blue-medium: #496dcb;
   --color-blue-dark: #365193;
 
-  //  base colors
-  --background: var(--color-white);
-  --foreground: var(--color-black-medium);
+  // base colors
+  --background: var(--color-black-medium);
+  --foreground: var(--color-white);
+  --color-bg-card: var(--color-black-light);
 
   // overlay colors
   --color-bg-overlay: var(--color-black-opacity-50);

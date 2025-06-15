@@ -2,9 +2,20 @@
 @use "$styles/mixins/breakpoints";
 
 .block {
+  padding: convert.to-rem(70) 0;
+}
+
+.sort {
+  padding: convert.to-rem(10);
+  margin-bottom: convert.to-rem(20);
+  border-radius: convert.to-rem(10);
+  background-color: var(--color-bg-card);
+}
+
+.list,
+.sort {
   display: grid;
   gap: convert.to-rem(20);
-  padding: 70px 0;
 
   @include breakpoints.sm {
     grid-template-columns: repeat(2, 1fr);
