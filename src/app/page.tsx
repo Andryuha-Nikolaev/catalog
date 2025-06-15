@@ -20,7 +20,7 @@ export default async function Home({ searchParams }: HomePageProps) {
 
   currentSearchParams.set(SearchParamsNames.LIMIT, "12")
 
-  const queryString = currentSearchParams.toString()
+  const queryString = String(currentSearchParams)
 
   const data = await getCars(queryString)
 

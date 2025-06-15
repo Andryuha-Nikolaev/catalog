@@ -5,15 +5,21 @@
   padding: convert.to-rem(70) 0;
 }
 
-.sort {
-  padding: convert.to-rem(10);
+.heading {
+  position: relative;
+  padding: convert.to-rem(10) 0;
   margin-bottom: convert.to-rem(20);
   border-radius: convert.to-rem(10);
   background-color: var(--color-bg-card);
+  z-index: 2;
+}
+
+.sort {
+  padding-left: convert.to-rem(10);
 }
 
 .list,
-.sort {
+.heading {
   display: grid;
   gap: convert.to-rem(20);
 

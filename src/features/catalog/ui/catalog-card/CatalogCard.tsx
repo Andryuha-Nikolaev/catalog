@@ -1,25 +1,26 @@
-import Image from "next/image"
 import s from "./CatalogCard.module.scss"
 import { RootButton } from "$shared/ui/buttons/root"
+import { Carousel } from "./carousel/Carousel"
+import insertSpaces from "$shared/lib/format/insertSpaces"
 
 type CatalogCardProps = {
   mark: string
   folder: string
   price: number
-  image: string
+  images: string[]
   modification: string
 }
 
-export const CatalogCard = ({ mark, folder, price, image, modification }: CatalogCardProps) => {
+export const CatalogCard = ({ mark, folder, price, images, modification }: CatalogCardProps) => {
   const name = `${mark} ${folder}`
 
   return (
     <div className={s.block}>
-      <Image width={1600} height={1200} src={image} alt={name} className={s.image} sizes="600px" />
+      <Carousel slides={images} />
       <div className={s.content}>
         <div className={s.info}>
           <h3 className={s.name}>{name}</h3>
-          <p>{price} ₽</p>
+          <p>{insertSpaces(String(price))} ₽</p>
           <div className={s.info}>
             <p className={s.modification}>{modification}</p>
           </div>

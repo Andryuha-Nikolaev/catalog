@@ -36,8 +36,11 @@ export const Catalog = ({ data: { data, meta } }: CatalogProps) => {
       {!data.length && <h3>Ничего не найдено</h3>}
       {!!data.length && (
         <>
-          <div className={s.sort}>
-            <SortSelect options={sortOptions} />
+          <div className={s.heading}>
+            <div className={s.sort}>
+              {" "}
+              <SortSelect options={sortOptions} />
+            </div>
           </div>
 
           <div className={s.list}>
@@ -47,7 +50,7 @@ export const Catalog = ({ data: { data, meta } }: CatalogProps) => {
                 mark={mark_id}
                 folder={folder_id}
                 price={price}
-                image={images.image[0]}
+                images={images.image.slice(0, 5)}
                 modification={modification_id}
               />
             ))}

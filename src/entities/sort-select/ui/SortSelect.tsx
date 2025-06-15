@@ -37,7 +37,7 @@ export const SortSelect = ({ options }: SortSelectProps) => {
       params.set(SearchParamsNames.ORDER, option.order)
     }
 
-    handleChangeParams(params.toString())
+    handleChangeParams(String(params))
   }
 
   return (
