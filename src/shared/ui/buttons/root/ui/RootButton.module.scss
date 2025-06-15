@@ -1,0 +1,74 @@
+@use "$styles/functions/convert";
+@use "$styles/mixins/mixins";
+@use "$styles/mixins/interaction";
+@use "$styles/mixins/transition";
+@use "$styles/mixins/button";
+
+.button {
+  border: none;
+  font-size: convert.to-rem(14);
+  font-weight: 600;
+  flex-shrink: 0;
+  line-height: 1;
+  border-radius: convert.to-rem(10);
+  gap: convert.to-rem(10);
+  position: relative;
+  text-decoration: none;
+  width: fit-content;
+
+  @include mixins.flex-center;
+  flex-direction: row;
+
+  &.sm {
+    min-height: convert.to-rem(36);
+    padding: convert.to-rem(5) convert.to-rem(10);
+  }
+
+  &.md {
+    min-height: convert.to-rem(50);
+    padding: convert.to-rem(5) convert.to-rem(16);
+  }
+
+  &.lg {
+    min-height: convert.to-rem(60);
+    padding: convert.to-rem(5) convert.to-rem(30);
+  }
+
+  &.var1 {
+    @include button.button-1;
+  }
+
+  &.var2 {
+    @include button.button-2;
+  }
+  &.var3 {
+    @include button.button-3;
+  }
+
+  &.loading {
+    pointer-events: none;
+  }
+}
+
+.icon {
+  @include transition.create(opacity);
+  max-width: convert.to-rem(24);
+  max-height: convert.to-rem(24);
+
+  &.right {
+    order: 1;
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.spinner {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

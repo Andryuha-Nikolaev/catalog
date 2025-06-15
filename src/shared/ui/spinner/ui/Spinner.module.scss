@@ -1,0 +1,21 @@
+@use "$styles/functions/convert";
+
+.spinner {
+	width: convert.to-rem(30);
+	height: convert.to-rem(30);
+	border: convert.to-rem(3) solid var(--color-bg-spinner);
+	border-bottom-color: var(--color-fg-spinner);
+	border-radius: 50%;
+	display: inline-block;
+	box-sizing: border-box;
+	animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

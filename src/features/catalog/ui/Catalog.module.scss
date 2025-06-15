@@ -1,0 +1,42 @@
+@use "$styles/functions/convert";
+@use "$styles/mixins/breakpoints";
+
+.block {
+  padding: convert.to-rem(70) 0;
+}
+
+.heading {
+  position: relative;
+  padding: convert.to-rem(10) 0;
+  margin-bottom: convert.to-rem(20);
+  border-radius: convert.to-rem(10);
+  background-color: var(--color-bg-card);
+  z-index: 2;
+}
+
+.sort {
+  padding-left: convert.to-rem(10);
+}
+
+.list,
+.heading {
+  display: grid;
+  gap: convert.to-rem(20);
+
+  @include breakpoints.sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoints.md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include breakpoints.lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.pagination {
+  margin: convert.to-rem(20) auto 0;
+  width: fit-content;
+}

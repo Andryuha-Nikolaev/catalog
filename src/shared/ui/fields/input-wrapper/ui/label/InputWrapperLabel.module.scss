@@ -1,0 +1,14 @@
+@use "$styles/functions/convert";
+@use "$styles/mixins/typography";
+
+.wrap {
+	margin-bottom: convert.to-rem(5);
+	align-self: flex-start;
+
+	label {
+		@include typography.main-text();
+	}
+}
+.asterisk {
+	color: var(--color-alert);
+}

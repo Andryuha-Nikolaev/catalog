@@ -1,0 +1,131 @@
+:root {
+  // font
+  --font-size-init-number: 16;
+  --font-size_normal: calc(var(--font-size-init-number) * 1px);
+  --font-size_small: 14px;
+  --font-line-height: normal;
+
+  // duration
+  --transition-duration: 0.2s;
+  --transition-duration-long: 0.5s;
+
+  // sizes
+  --header-height-number: 60;
+  --input-height-number: 50;
+  --input-border-radius-number: 10;
+
+  // z-index
+  --z-index-burger: 98;
+  --z-index-header: 99;
+  --z-index-modal: 100;
+
+  // shadow
+  --box-shadow: 0px 0px 20px 0px #21212162;
+
+  // use these colors only in root.scss
+  --color-white: #f8f8f8;
+
+  --color-black-light: #303030;
+  --color-black-medium: #212121;
+  --color-black-dark: #000000;
+  --color-black-opacity-50: rgba(33, 33, 33, 0.5);
+
+  --color-gray-light: #f3f3f3;
+  --color-gray-medium: #e0e0e0;
+  --color-gray-dark: #8c8c8c;
+
+  --color-red-medium: #ff4a4a;
+
+  --color-blue-light: #517ae0;
+  --color-blue-medium: #496dcb;
+  --color-blue-dark: #365193;
+
+  // base colors
+  --background: var(--color-black-medium);
+  --foreground: var(--color-white);
+  --color-bg-card: var(--color-black-light);
+
+  // overlay colors
+  --color-bg-overlay: var(--color-black-opacity-50);
+
+  // alert colors
+  --color-alert: var(--color-red-medium);
+
+  // spinner colors
+  --color-bg-spinner: var(--color-gray-medium);
+  --color-fg-spinner: var(--color-red-medium);
+
+  // button-1 colors
+  --color-bg-button-1: var(--color-black-medium);
+  --color-fg-button-1: var(--color-white);
+  --color-bg-button-1-hover: var(--color-black-dark);
+  --color-fg-button-1-hover: var(--color-white);
+  --color-bg-button-1-active: var(--color-black-light);
+  --color-fg-button-1-active: var(--color-white);
+
+  // button-2 colors
+  --color-bg-button-2: var(--color-white);
+  --color-fg-button-2: var(--color-black-medium);
+  --color-bg-button-2-hover: var(--color-black-dark);
+  --color-fg-button-2-hover: var(--color-white);
+  --color-bg-button-2-active: var(--color-black-light);
+  --color-fg-button-2-active: var(--color-white);
+
+  // button-3 colors
+  --color-bg-button-3: var(--color-blue-light);
+  --color-fg-button-3: var(--color-white);
+  --color-bg-button-3-hover: var(--color-blue-medium);
+  --color-fg-button-3-hover: var(--color-white);
+  --color-bg-button-3-active: var(--color-blue-dark);
+  --color-fg-button-3-active: var(--color-white);
+
+  // button disabled colors
+  --color-bg-button-disabled: var(--color-gray-dark);
+  --color-fg-button-disabled: var(--color-gray-light);
+
+  // link-1 colors
+  --color-link-1-hover: var(--color-blue-medium);
+  --color-link-1-active: var(--color-blue-dark);
+
+  // link-2 colors
+  --color-link-2-hover: var(--color-red-medium);
+  --color-link-2-active: var(--color-red-medium);
+
+  // link disabled colors
+  --color-link-disabled: var(--color-gray-dark);
+
+  // pagination colors
+  --color-bg-pagination-item: var(--color-white);
+  --color-fg-pagination-item: var(--color-black-medium);
+  --color-bg-pagination-item-hover: var(--color-blue-medium);
+  --color-fg-pagination-item-hover: var(--color-white);
+  --color-bg-pagination-item-active: var(--color-blue-dark);
+  --color-fg-pagination-item-active: var(--color-white);
+
+  // scrollbar colors
+  --color-scrollbar-track: transparent;
+  --color-scrollbar-thumb: var(--color-gray-dark);
+
+  // input colors
+  --color-input-border: var(--color-gray-dark);
+  --color-input-border-focused: var(--color-black-medium);
+  --color-bg-input: var(--color-white);
+  --color-fg-input: var(--color-black-medium);
+  --color-bg-input-autofill: var(--color-bg-input);
+  --color-fg-input-autofill: var(--color-fg-input);
+  --color-input-placeholder: var(--color-black-opacity-50);
+  --color-bg-input-disabled: var(--color-gray-medium);
+  --color-fg-input-disabled: var(--color-gray-dark);
+
+  // select colors
+  --color-select-indicator: var(--color-gray-dark);
+  --color-bg-select-option-focused: var(--color-gray-light);
+  --color-bg-select-option-selected: var(--color-gray-medium);
+
+  // focus colors
+  --color-outline-focus: var(--color-gray-dark);
+
+  @media (min-width: 1280px) {
+    --header-height-number: 80;
+  }
+}

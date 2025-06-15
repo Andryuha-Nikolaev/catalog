@@ -1,0 +1,16 @@
+@use "$styles/mixins/typography";
+
+.block {
+	position: relative;
+	width: 100%;
+	height: fit-content;
+}
+
+.errorMessage {
+	display: block;
+	@include typography.helper-text;
+	color: var(--color-alert);
+	position: absolute;
+	top: 100%;
+	left: 0;
+}

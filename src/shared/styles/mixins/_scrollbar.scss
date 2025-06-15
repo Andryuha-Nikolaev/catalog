@@ -1,0 +1,41 @@
+@mixin scrollbar {
+	@-moz-document url-prefix() {
+		scrollbar-width: thin;
+		scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
+	}
+
+	&::-webkit-scrollbar {
+		height: 8px;
+		width: 8px;
+	}
+	&::-webkit-scrollbar-track {
+		background: var(--color-scrollbar-track);
+		border-radius: 5px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: var(--color-scrollbar-thumb);
+		border-radius: 5px;
+	}
+}
+
+@mixin scrollbar-all-children {
+	@-moz-document url-prefix() {
+		* {
+			scrollbar-width: thin;
+			scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
+		}
+	}
+
+	*::-webkit-scrollbar {
+		height: 8px;
+		width: 8px;
+	}
+	*::-webkit-scrollbar-track {
+		background: var(--color-scrollbar-track);
+		border-radius: 5px;
+	}
+	*::-webkit-scrollbar-thumb {
+		background-color: var(--color-scrollbar-thumb);
+		border-radius: 5px;
+	}
+}
