@@ -20,7 +20,7 @@ const PagePaginationComponent = ({ ...props }: PagePaginationProps) => {
       currentPage={+currentPage}
       onPageChange={(e) => {
         params.set(SearchParamsNames.PAGE, String(e))
-        handleChangeParams(String(params), "push", true)
+        handleChangeParams(String(params))
       }}
       {...props}
     />

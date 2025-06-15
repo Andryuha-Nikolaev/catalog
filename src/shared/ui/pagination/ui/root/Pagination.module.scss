@@ -25,6 +25,19 @@
 .arrow {
   background-color: var(--color-bg-pagination-item);
   color: var(--color-fg-pagination-item);
+}
+
+.page,
+.ellipsis,
+.arrow {
+  padding: 2px;
+
+  font-size: convert.to-rem(16);
+  height: convert.to-rem(30);
+  min-width: convert.to-rem(30);
+  line-height: 1;
+
+  @include mixins.flex-center;
 
   @include interaction.hover {
     background-color: var(--color-bg-pagination-item-hover);
@@ -40,23 +53,6 @@
     visibility: hidden;
     opacity: 0;
   }
-}
-
-.page,
-.ellipsis,
-.arrow {
-  padding: 2px;
-
-  font-size: convert.to-rem(16);
-  height: convert.to-rem(30);
-  min-width: convert.to-rem(30);
-  line-height: 1;
-
-  @include mixins.flex-center;
-}
-
-.ellipsis {
-  cursor: default;
 }
 
 .arrow {

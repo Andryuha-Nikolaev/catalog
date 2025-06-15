@@ -1,8 +1,6 @@
 import clsx from "clsx"
-
 import { ArrowIcon } from "./icons/ArrowIcon"
 import s from "./Pagination.module.scss"
-
 import type { PaginationProps } from "../../model/types"
 
 export const Pagination = ({
@@ -18,6 +16,16 @@ export const Pagination = ({
   const handlePageChange = (page: number) => {
     if (page < 1 || page > totalPages || page === currentPage) return
     onPageChange(page)
+  }
+
+  const handleEllipsisClick = (type: "start" | "end") => {
+    let newPage
+    if (type === "start") {
+      newPage = Math.max(1, currentPage - visiblePages)
+    } else {
+      newPage = Math.min(totalPages, currentPage + visiblePages)
+    }
+    handlePageChange(newPage)
   }
 
   const generatePageItems = () => {
@@ -72,9 +80,13 @@ export const Pagination = ({
       {pageItems.map((item) => {
         if (typeof item === "string") {
           return (
-            <span key={item} className={s.ellipsis}>
+            <button
+              key={item}
+              className={s.ellipsis}
+              onClick={() => handleEllipsisClick(item === "ellipsis-start" ? "start" : "end")}
+            >
               ...
-            </span>
+            </button>
           )
         }
 
