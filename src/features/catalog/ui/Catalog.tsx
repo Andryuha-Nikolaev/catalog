@@ -41,13 +41,14 @@ export const Catalog = ({ data: { data, meta } }: CatalogProps) => {
           </div>
 
           <div className={s.list}>
-            {data.map(({ unique_id, mark_id, folder_id, price, images }) => (
+            {data.map(({ unique_id, mark_id, folder_id, price, images, modification_id }) => (
               <CatalogCard
                 key={unique_id}
                 mark={mark_id}
                 folder={folder_id}
                 price={price}
                 image={images.image[0]}
+                modification={modification_id}
               />
             ))}
           </div>
