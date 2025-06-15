@@ -15,7 +15,11 @@
 }
 
 .sort {
-  padding-left: convert.to-rem(10);
+  padding: 0 convert.to-rem(10);
+
+  @include breakpoints.sm {
+    padding-right: 0;
+  }
 }
 
 .list,
