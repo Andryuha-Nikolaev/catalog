@@ -1,5 +1,6 @@
 import { OptionType, SortSelect } from "$entities/sort-select"
 import { SearchParamsNames } from "$shared/constants/searchParamsNames"
+import { PagePagination } from "$shared/ui/pagination"
 import { CarsResponseType } from "../model/types"
 import { CatalogCard } from "./catalog-card/CatalogCard"
 import s from "./Catalog.module.scss"
@@ -29,7 +30,7 @@ const sortOptions: OptionType[] = [
   },
 ]
 
-export const Catalog = ({ data: { data } }: CatalogProps) => {
+export const Catalog = ({ data: { data, meta } }: CatalogProps) => {
   return (
     <div className={s.block}>
       {!data.length && <h3>Ничего не найдено</h3>}
@@ -49,6 +50,10 @@ export const Catalog = ({ data: { data } }: CatalogProps) => {
                 image={images.image[0]}
               />
             ))}
+          </div>
+
+          <div className={s.pagination}>
+            <PagePagination totalPages={meta.last_page} />
           </div>
         </>
       )}
