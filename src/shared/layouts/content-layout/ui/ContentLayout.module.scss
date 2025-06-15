@@ -1,0 +1,13 @@
+@use "$styles/functions/convert";
+@use "$styles/mixins/breakpoints";
+
+.block {
+	max-width: convert.to-rem(1440);
+	padding: 0 convert.to-rem(10);
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	@include breakpoints.lg {
+		padding: 0 convert.to-rem(30);
+	}
+}

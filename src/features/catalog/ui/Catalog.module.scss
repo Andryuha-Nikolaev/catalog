@@ -1,0 +1,20 @@
+@use "$styles/functions/convert";
+@use "$styles/mixins/breakpoints";
+
+.block {
+  display: grid;
+  gap: convert.to-rem(20);
+  padding: 70px 0;
+
+  @include breakpoints.sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoints.md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include breakpoints.lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
