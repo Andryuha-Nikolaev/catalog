@@ -1,7 +1,16 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: 'standalone',
+  images: {
+    formats: ['image/webp'],
+    remotePatterns: [
+      {
+        hostname: '**',
+        pathname: '**',
+      },
+    ],
+  },
 };
 
 export default nextConfig;
